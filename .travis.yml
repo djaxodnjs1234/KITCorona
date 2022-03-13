@@ -12,3 +12,11 @@ cache:
     - node_modules
 notifications:
   email:       false
+
+# Analytics
+analytics:
+  provider               : "google-gtag"
+                          # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          : "G-B2MQ51M622"
+    anonymize_ip         : # true, false (default)
