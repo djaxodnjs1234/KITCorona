@@ -32,7 +32,7 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: [".", "3/2(수)", "3/3(목)", "3/4(금)", "3/7(월)", "3/8(화)", "3/10(목)", "3/11(금)"],//xodnjs
+    labels: ["3/2(수)", "3/3(목)", "3/4(금)", "3/7(월)", "3/8(화)", "3/10(목)", "3/11(금)"],//xodnjs
     datasets: [{
       label: "확진자",
       lineTension: 0.3,
@@ -46,7 +46,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 48, 20, 25, 75, 61, 91, 38],//xodnjs
+      data: [48, 20, 25, 75, 61, 91, 38],//xodnjs
     }],
   },
   options: {
@@ -74,7 +74,7 @@ var myLineChart = new Chart(ctx, {
       }],
       yAxes: [{
         ticks: {
-          maxTicksLimit: 10,
+          maxTicksLimit: 5,
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
