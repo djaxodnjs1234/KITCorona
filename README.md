@@ -9,6 +9,9 @@
 ## 제보하기
 
 이메일  djaxodnjs1234@naver.com
-##출처 & 참고
-금오톡톡, 긴급 안전 문자, 코로나 라이브
+
+## 출처
+
+금오톡톡 데이터
+
 https://url.kr/sxldyp
