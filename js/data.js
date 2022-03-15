@@ -9,9 +9,9 @@ corona_kumoh_latest.innerText = json_data[0].school_corona
 
 // 7일간 교내 확진자 수
 for (let num = 0; num < 7; num++) {
-    if (json_data[num].school_corona !== "-") {
+    try {
         corona_students += Number(json_data[num].school_corona)
-    }
+    } catch {}
 }
 seven_days_corona_in_school.innerText = corona_students
 
