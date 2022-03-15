@@ -27,12 +27,27 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
+let data_count = 0;
+date_labels = new Array();
+data_corona = new Array();
+
+for (let data of json_data) {
+  if (data_count === 7) {
+    break;
+  }
+  if (data.school_corona !== "-") {
+    date_labels.unshift(data.date.replace('.', '/'));
+    data_corona.unshift(data.school_corona)
+    data_count += 1;
+  }
+}
+
 // Area Chart Example
 var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: [  "3/4(금)", "3/7(월)", "3/8(화)", "3/10(목)", "3/11(금)", "3/14(월)", "3/15(화)"],//xodnjs
+    labels: date_labels,
     datasets: [{
       label: "확진자",
       lineTension: 0.3,
@@ -46,7 +61,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [25, 75, 61, 91, 38, 154, 76],//xodnjs
+      data: data_corona,
     }],
   },
   options: {
