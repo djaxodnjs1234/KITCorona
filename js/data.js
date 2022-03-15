@@ -5,13 +5,17 @@ const corona_data_table = document.getElementsByClassName('corona_data_table')[0
 let corona_students = 0;
 
 // 최근 교내 확진자 수
-corona_kumoh_latest.innerText = json_data[0].school_corona
+for (let data of json_data) {
+    if (data.school_corona !== "-") {
+        corona_kumoh_latest.innerText = data.school_corona
+    }
+}
 
 // 7일간 교내 확진자 수
 for (let num = 0; num < 7; num++) {
-    try {
+    if (json_data[num].school_corona !== "-") {
         corona_students += Number(json_data[num].school_corona)
-    } catch {}
+    }
 }
 seven_days_corona_in_school.innerText = corona_students
 
