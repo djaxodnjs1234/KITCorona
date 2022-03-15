@@ -7,7 +7,8 @@ let corona_students = 0;
 // 최근 교내 확진자 수
 for (let data of json_data) {
     if (data.school_corona !== "-") {
-        corona_kumoh_latest.innerText = data.school_corona
+          corona_kumoh_latest.innerText = data.school_corona
+          break
     }
 }
 
@@ -22,6 +23,10 @@ seven_days_corona_in_school.innerText = corona_students
 // 셀 채우기
 cell_data = ""
 for (let data of json_data) {
+  if (data.school_corona =="-"){
+    cell_data += "<tr><td>" + data.date +"</td><td>" + data.school_corona + "</td>"
+  }else{
     cell_data += "<tr><td>" + data.date +"</td><td>" + data.school_corona + "명</td>"
+  }
 }
 corona_data_table.innerHTML = cell_data

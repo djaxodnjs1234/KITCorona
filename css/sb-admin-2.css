@@ -543,6 +543,11 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
+#blocktext {
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 30px
+}
 
 .container,
 .container-fluid,
