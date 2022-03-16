@@ -1,5 +1,9 @@
 json_data = [
     {
+        "date": "03.16",
+        "school_corona": 19
+    },
+    {
         "date": "03.15",
         "school_corona": 81
     },
